@@ -1,0 +1,739 @@
+{
+  "model": "LogisticRegression(class_weight='balanced', L2)",
+  "intercept": -0.753959281459185,
+  "threshold": 0.546,
+  "numeric": {
+    "tenure": {
+      "coef": -0.7597116281229732,
+      "mean": 32.48509052183174,
+      "scale": 24.56656301538815
+    },
+    "MonthlyCharges": {
+      "coef": -0.26293780093245706,
+      "mean": 64.92996095136671,
+      "scale": 30.135430576006627
+    }
+  },
+  "binary": {
+    "SeniorCitizen": {
+      "coef": 0.15017818208356876
+    }
+  },
+  "categorical": {
+    "gender": {
+      "reference": "Female",
+      "levels": {
+        "Female": 0.0,
+        "Male": 0.03829347066702298
+      }
+    },
+    "Partner": {
+      "reference": "No",
+      "levels": {
+        "No": 0.0,
+        "Yes": 0.01570879648510192
+      }
+    },
+    "Dependents": {
+      "reference": "No",
+      "levels": {
+        "No": 0.0,
+        "Yes": -0.2416347778090931
+      }
+    },
+    "PhoneService": {
+      "reference": "No",
+      "levels": {
+        "No": 0.0,
+        "Yes": -0.23351262711505022
+      }
+    },
+    "MultipleLines": {
+      "reference": "No",
+      "levels": {
+        "No": 0.0,
+        "Yes": 0.32245231660032736
+      }
+    },
+    "InternetService": {
+      "reference": "DSL",
+      "levels": {
+        "DSL": 0.0,
+        "Fiber optic": 1.118833077012385,
+        "No": -1.047549975889245
+      }
+    },
+    "OnlineSecurity": {
+      "reference": "No",
+      "levels": {
+        "No": 0.0,
+        "Yes": -0.34292609515939937
+      }
+    },
+    "OnlineBackup": {
+      "reference": "No",
+      "levels": {
+        "No": 0.0,
+        "Yes": -0.06818818060113731
+      }
+    },
+    "DeviceProtection": {
+      "reference": "No",
+      "levels": {
+        "No": 0.0,
+        "Yes": 0.03933013248553686
+      }
+    },
+    "TechSupport": {
+      "reference": "No",
+      "levels": {
+        "No": 0.0,
+        "Yes": -0.2747920578555969
+      }
+    },
+    "StreamingTV": {
+      "reference": "No",
+      "levels": {
+        "No": 0.0,
+        "Yes": 0.3690536515383173
+      }
+    },
+    "StreamingMovies": {
+      "reference": "No",
+      "levels": {
+        "No": 0.0,
+        "Yes": 0.3926384579545568
+      }
+    },
+    "Contract": {
+      "reference": "Month-to-month",
+      "levels": {
+        "Month-to-month": 0.0,
+        "One year": -0.7209760619667474,
+        "Two year": -1.4061790459303216
+      }
+    },
+    "PaperlessBilling": {
+      "reference": "No",
+      "levels": {
+        "No": 0.0,
+        "Yes": 0.3358030961843968
+      }
+    },
+    "PaymentMethod": {
+      "reference": "Bank transfer (automatic)",
+      "levels": {
+        "Bank transfer (automatic)": 0.0,
+        "Credit card (automatic)": -0.005028240538338243,
+        "Electronic check": 0.399459831608627,
+        "Mailed check": 0.08164143595424565
+      }
+    }
+  },
+  "typical_profile": {
+    "tenure": 32.48509052183174,
+    "MonthlyCharges": 64.92996095136671,
+    "SeniorCitizen": 0,
+    "gender": "Male",
+    "Partner": "No",
+    "Dependents": "No",
+    "PhoneService": "Yes",
+    "MultipleLines": "No",
+    "InternetService": "Fiber optic",
+    "OnlineSecurity": "No",
+    "OnlineBackup": "No",
+    "DeviceProtection": "No",
+    "TechSupport": "No",
+    "StreamingTV": "No",
+    "StreamingMovies": "No",
+    "Contract": "Month-to-month",
+    "PaperlessBilling": "Yes",
+    "PaymentMethod": "Electronic check"
+  },
+  "metrics": {
+    "roc_auc": 0.8388,
+    "pr_auc": 0.6285,
+    "precision": 0.5244,
+    "recall": 0.746,
+    "f1": 0.6159
+  },
+  "n_train": 5634,
+  "n_test": 1409,
+  "parity_cases": [
+    {
+      "features": {
+        "tenure": 72,
+        "MonthlyCharges": 114.05,
+        "SeniorCitizen": 0,
+        "gender": "Male",
+        "Partner": "Yes",
+        "Dependents": "Yes",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "Yes",
+        "OnlineBackup": "Yes",
+        "DeviceProtection": "Yes",
+        "TechSupport": "Yes",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "Yes",
+        "Contract": "Two year",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Credit card (automatic)"
+      },
+      "probability": 0.08749010186474471
+    },
+    {
+      "features": {
+        "tenure": 8,
+        "MonthlyCharges": 100.15,
+        "SeniorCitizen": 1,
+        "gender": "Female",
+        "Partner": "No",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "Yes",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "Yes",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Credit card (automatic)"
+      },
+      "probability": 0.8666382916373552
+    },
+    {
+      "features": {
+        "tenure": 41,
+        "MonthlyCharges": 78.35,
+        "SeniorCitizen": 0,
+        "gender": "Female",
+        "Partner": "Yes",
+        "Dependents": "Yes",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "DSL",
+        "OnlineSecurity": "Yes",
+        "OnlineBackup": "Yes",
+        "DeviceProtection": "Yes",
+        "TechSupport": "No",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "No",
+        "Contract": "One year",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Credit card (automatic)"
+      },
+      "probability": 0.15918692894042935
+    },
+    {
+      "features": {
+        "tenure": 18,
+        "MonthlyCharges": 78.2,
+        "SeniorCitizen": 0,
+        "gender": "Male",
+        "Partner": "Yes",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "No",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "Yes",
+        "TechSupport": "Yes",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "No",
+        "PaymentMethod": "Electronic check"
+      },
+      "probability": 0.6640786321128093
+    },
+    {
+      "features": {
+        "tenure": 72,
+        "MonthlyCharges": 82.65,
+        "SeniorCitizen": 0,
+        "gender": "Female",
+        "Partner": "Yes",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "DSL",
+        "OnlineSecurity": "Yes",
+        "OnlineBackup": "Yes",
+        "DeviceProtection": "Yes",
+        "TechSupport": "No",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "Yes",
+        "Contract": "Two year",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Credit card (automatic)"
+      },
+      "probability": 0.062303919508113696
+    },
+    {
+      "features": {
+        "tenure": 21,
+        "MonthlyCharges": 99.85,
+        "SeniorCitizen": 0,
+        "gender": "Female",
+        "Partner": "No",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "Yes",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "Yes",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Credit card (automatic)"
+      },
+      "probability": 0.8217984330203182
+    },
+    {
+      "features": {
+        "tenure": 21,
+        "MonthlyCharges": 99.15,
+        "SeniorCitizen": 0,
+        "gender": "Female",
+        "Partner": "No",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "No",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "Yes",
+        "DeviceProtection": "No",
+        "TechSupport": "Yes",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "Yes",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Bank transfer (automatic)"
+      },
+      "probability": 0.7195985883285155
+    },
+    {
+      "features": {
+        "tenure": 19,
+        "MonthlyCharges": 24.1,
+        "SeniorCitizen": 0,
+        "gender": "Male",
+        "Partner": "No",
+        "Dependents": "Yes",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "No",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Credit card (automatic)"
+      },
+      "probability": 0.3074932285323945
+    },
+    {
+      "features": {
+        "tenure": 61,
+        "MonthlyCharges": 19.75,
+        "SeniorCitizen": 0,
+        "gender": "Female",
+        "Partner": "Yes",
+        "Dependents": "Yes",
+        "PhoneService": "Yes",
+        "MultipleLines": "No",
+        "InternetService": "No",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "Two year",
+        "PaperlessBilling": "No",
+        "PaymentMethod": "Credit card (automatic)"
+      },
+      "probability": 0.015371284789909203
+    },
+    {
+      "features": {
+        "tenure": 17,
+        "MonthlyCharges": 45.05,
+        "SeniorCitizen": 1,
+        "gender": "Male",
+        "Partner": "No",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "No",
+        "InternetService": "DSL",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Electronic check"
+      },
+      "probability": 0.6430415476428987
+    },
+    {
+      "features": {
+        "tenure": 70,
+        "MonthlyCharges": 106.05,
+        "SeniorCitizen": 0,
+        "gender": "Male",
+        "Partner": "Yes",
+        "Dependents": "Yes",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "Yes",
+        "OnlineBackup": "Yes",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "Yes",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Electronic check"
+      },
+      "probability": 0.4583732392281448
+    },
+    {
+      "features": {
+        "tenure": 72,
+        "MonthlyCharges": 114.85,
+        "SeniorCitizen": 1,
+        "gender": "Female",
+        "Partner": "Yes",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "Yes",
+        "OnlineBackup": "Yes",
+        "DeviceProtection": "Yes",
+        "TechSupport": "Yes",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "Yes",
+        "Contract": "Two year",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Bank transfer (automatic)"
+      },
+      "probability": 0.1199286816488721
+    },
+    {
+      "features": {
+        "tenure": 49,
+        "MonthlyCharges": 30.2,
+        "SeniorCitizen": 0,
+        "gender": "Male",
+        "Partner": "No",
+        "Dependents": "No",
+        "PhoneService": "No",
+        "MultipleLines": "No",
+        "InternetService": "DSL",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "Yes",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Bank transfer (automatic)"
+      },
+      "probability": 0.3662765840898234
+    },
+    {
+      "features": {
+        "tenure": 11,
+        "MonthlyCharges": 84.8,
+        "SeniorCitizen": 1,
+        "gender": "Female",
+        "Partner": "No",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "Yes",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Credit card (automatic)"
+      },
+      "probability": 0.860380405871148
+    },
+    {
+      "features": {
+        "tenure": 19,
+        "MonthlyCharges": 48.8,
+        "SeniorCitizen": 0,
+        "gender": "Female",
+        "Partner": "No",
+        "Dependents": "Yes",
+        "PhoneService": "Yes",
+        "MultipleLines": "No",
+        "InternetService": "DSL",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "Yes",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "No",
+        "PaymentMethod": "Mailed check"
+      },
+      "probability": 0.29640027606110897
+    },
+    {
+      "features": {
+        "tenure": 72,
+        "MonthlyCharges": 84.5,
+        "SeniorCitizen": 0,
+        "gender": "Male",
+        "Partner": "Yes",
+        "Dependents": "Yes",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "Yes",
+        "Contract": "Two year",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Credit card (automatic)"
+      },
+      "probability": 0.14072021892356748
+    },
+    {
+      "features": {
+        "tenure": 8,
+        "MonthlyCharges": 19.5,
+        "SeniorCitizen": 0,
+        "gender": "Female",
+        "Partner": "Yes",
+        "Dependents": "Yes",
+        "PhoneService": "Yes",
+        "MultipleLines": "No",
+        "InternetService": "No",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "Two year",
+        "PaperlessBilling": "No",
+        "PaymentMethod": "Bank transfer (automatic)"
+      },
+      "probability": 0.07491378081100433
+    },
+    {
+      "features": {
+        "tenure": 15,
+        "MonthlyCharges": 91.0,
+        "SeniorCitizen": 0,
+        "gender": "Male",
+        "Partner": "No",
+        "Dependents": "Yes",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "Yes",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "No",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Electronic check"
+      },
+      "probability": 0.831997968931936
+    },
+    {
+      "features": {
+        "tenure": 67,
+        "MonthlyCharges": 105.7,
+        "SeniorCitizen": 0,
+        "gender": "Female",
+        "Partner": "Yes",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "Yes",
+        "DeviceProtection": "Yes",
+        "TechSupport": "No",
+        "StreamingTV": "Yes",
+        "StreamingMovies": "Yes",
+        "Contract": "One year",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Bank transfer (automatic)"
+      },
+      "probability": 0.3529941109107065
+    },
+    {
+      "features": {
+        "tenure": 26,
+        "MonthlyCharges": 35.4,
+        "SeniorCitizen": 0,
+        "gender": "Female",
+        "Partner": "Yes",
+        "Dependents": "No",
+        "PhoneService": "No",
+        "MultipleLines": "No",
+        "InternetService": "DSL",
+        "OnlineSecurity": "Yes",
+        "OnlineBackup": "No",
+        "DeviceProtection": "Yes",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "One year",
+        "PaperlessBilling": "No",
+        "PaymentMethod": "Credit card (automatic)"
+      },
+      "probability": 0.21254594740393437
+    },
+    {
+      "features": {
+        "tenure": 2,
+        "MonthlyCharges": 74.85,
+        "SeniorCitizen": 1,
+        "gender": "Male",
+        "Partner": "No",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "Yes",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Mailed check"
+      },
+      "probability": 0.8716822260154667
+    },
+    {
+      "features": {
+        "tenure": 21,
+        "MonthlyCharges": 28.5,
+        "SeniorCitizen": 0,
+        "gender": "Female",
+        "Partner": "Yes",
+        "Dependents": "No",
+        "PhoneService": "No",
+        "MultipleLines": "No",
+        "InternetService": "DSL",
+        "OnlineSecurity": "Yes",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "No",
+        "PaymentMethod": "Electronic check"
+      },
+      "probability": 0.4978285585466312
+    },
+    {
+      "features": {
+        "tenure": 49,
+        "MonthlyCharges": 20.05,
+        "SeniorCitizen": 0,
+        "gender": "Female",
+        "Partner": "Yes",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "No",
+        "InternetService": "No",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "One year",
+        "PaperlessBilling": "Yes",
+        "PaymentMethod": "Bank transfer (automatic)"
+      },
+      "probability": 0.07421906975653299
+    },
+    {
+      "features": {
+        "tenure": 21,
+        "MonthlyCharges": 19.8,
+        "SeniorCitizen": 0,
+        "gender": "Male",
+        "Partner": "Yes",
+        "Dependents": "Yes",
+        "PhoneService": "Yes",
+        "MultipleLines": "No",
+        "InternetService": "No",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "One year",
+        "PaperlessBilling": "No",
+        "PaymentMethod": "Mailed check"
+      },
+      "probability": 0.10783499999375681
+    },
+    {
+      "features": {
+        "tenure": 51,
+        "MonthlyCharges": 69.15,
+        "SeniorCitizen": 0,
+        "gender": "Female",
+        "Partner": "Yes",
+        "Dependents": "No",
+        "PhoneService": "Yes",
+        "MultipleLines": "No",
+        "InternetService": "Fiber optic",
+        "OnlineSecurity": "No",
+        "OnlineBackup": "No",
+        "DeviceProtection": "No",
+        "TechSupport": "No",
+        "StreamingTV": "No",
+        "StreamingMovies": "No",
+        "Contract": "Month-to-month",
+        "PaperlessBilling": "No",
+        "PaymentMethod": "Mailed check"
+      },
+      "probability": 0.4059639017437123
+    }
+  ]
+}
