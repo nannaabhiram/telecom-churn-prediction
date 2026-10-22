@@ -29,15 +29,15 @@ npm run build     # production build in dist/
 From the project root:
 
 ```bash
-python churn_pipeline.py --export-model dashboard/src/model/model.json
-cd dashboard && npm run verify
+python backend/churn_pipeline.py --export-model frontend/src/model/model.json
+cd frontend && npm run verify
 ```
 
 ## Deploy
 
-**Vercel:** import the repository, set *Root Directory* to `dashboard`. Vercel detects Vite automatically
+**Vercel:** import the repository, set *Root Directory* to `frontend`. Vercel detects Vite automatically
 (build `npm run build`, output `dist`).
 
-**GitHub Pages:** the workflow in `.github/workflows/deploy-dashboard.yml` builds and publishes on every push
+**GitHub Pages:** the workflow in `.github/workflows/deploy-frontend.yml` builds and publishes on every push
 to `main`. In the repository settings, set *Pages → Source* to **GitHub Actions**. Asset paths are relative
 (`base: './'` in `vite.config.js`), so the site works under `https://<user>.github.io/<repo>/`.

@@ -13,10 +13,10 @@ An interpretable churn model built in five phases:
 
 Usage
 -----
-    python churn_pipeline.py --data WA_Fn-UseC_-Telco-Customer-Churn.csv
+    python backend/churn_pipeline.py
 
-    # Also export model parameters for the React dashboard:
-    python churn_pipeline.py --export-model dashboard/src/model/model.json
+    # Also export model parameters for the React frontend:
+    python backend/churn_pipeline.py --export-model frontend/src/model/model.json
 
 Dataset: IBM Telco Customer Churn (Kaggle: blastchar/telco-customer-churn).
 """
@@ -460,7 +460,7 @@ def print_resume_summary(metrics: dict[str, float], n_train: int, n_test: int) -
 
 
 # --------------------------------------------------------------------------- #
-# Model export (consumed by the React dashboard)
+# Model export (consumed by the React frontend)
 # --------------------------------------------------------------------------- #
 
 def export_model(
@@ -596,14 +596,14 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--data",
         type=Path,
-        default=Path("WA_Fn-UseC_-Telco-Customer-Churn.csv"),
+        default=Path(__file__).resolve().parent / "WA_Fn-UseC_-Telco-Customer-Churn.csv",
         help="Path to the Telco Customer Churn CSV.",
     )
     parser.add_argument(
         "--export-model",
         type=Path,
         default=None,
-        help="Optional path to write model parameters as JSON (e.g. dashboard/src/model/model.json).",
+        help="Optional path to write model parameters as JSON (e.g. frontend/src/model/model.json).",
     )
     return parser.parse_args()
 
