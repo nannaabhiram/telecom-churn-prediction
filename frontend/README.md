@@ -38,6 +38,6 @@ cd frontend && npm run verify
 **Vercel:** import the repository, set *Root Directory* to `frontend`. Vercel detects Vite automatically
 (build `npm run build`, output `dist`).
 
-**GitHub Pages:** the workflow in `.github/workflows/deploy-frontend.yml` builds and publishes on every push
-to `main`. In the repository settings, set *Pages → Source* to **GitHub Actions**. Asset paths are relative
+**GitHub Pages:** run `npm run deploy`. It verifies, builds, and pushes `dist/` to the `gh-pages` branch. In the
+repository settings, set *Pages → Source* to *Deploy from a branch* with `gh-pages` / `/ (root)`. Asset paths are relative
 (`base: './'` in `vite.config.js`), so the site works under `https://<user>.github.io/<repo>/`.
